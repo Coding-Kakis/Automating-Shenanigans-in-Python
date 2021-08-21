@@ -1,18 +1,39 @@
+# Cookie clicker auto-clicker
+# Works only when the setting
+# `Particles` is turned off
+
 import pyautogui
 
 def locate_cookie():
+
+    """
+    Returns the locations of the Big Cookie
+    Does not return until the cookie is found
+    """
+
     loc = None
     while loc == None:
         loc = pyautogui.locateCenterOnScreen('rsrc/bigcookie.png')
     return loc
 
 def click_cookie(loc, ntimes):
+
+    """
+    Moves mouse to `loc` and clicks `ntimes`
+    """
+
     x,y = loc
     pyautogui.moveTo(x,y)
     for _ in range(ntimes):
         pyautogui.click()
 
 def round():
+
+    """
+    Does 1 round. 
+    Returns `Yes` if user wants to continue
+    Returns `No` otherwise.
+    """
 
     loc = locate_cookie()
 
