@@ -1,6 +1,5 @@
 # Cookie clicker auto-clicker
-# Works only when the setting
-# `Particles` is turned off
+# Works for the classic version here: https://orteil.dashnet.org/experiments/cookie/
 
 import pyautogui
 
